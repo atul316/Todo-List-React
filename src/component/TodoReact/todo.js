@@ -18,7 +18,7 @@ const Todo = () => {
   const [isEditItem, setIsEditItem] = useState("");
   const [toggleButton, setToggleButton] = useState(false);
 
-  // add the items fucnction
+
   const addItem = () => {
     if (!inputdata) {
       alert("plz fill the data");
@@ -45,7 +45,7 @@ const Todo = () => {
     }
   };
 
-  //edit the items
+
   const editItem = (index) => {
     const item_todo_edited = items.find((curElem) => {
       return curElem.id === index;
@@ -55,7 +55,7 @@ const Todo = () => {
     setToggleButton(true);
   };
 
-  // how to delete items section
+
   const deleteItem = (index) => {
     const updatedItems = items.filter((curElem) => {
       return curElem.id !== index;
@@ -63,12 +63,12 @@ const Todo = () => {
     setItems(updatedItems);
   };
 
-  // remove all the elements
+
   const removeAll = () => {
     setItems([]);
   };
 
-  // adding localStorage
+
   useEffect(() => {
     localStorage.setItem("mytodolist", JSON.stringify(items));
   }, [items]);
@@ -78,8 +78,7 @@ const Todo = () => {
       <div className="main-div">
         <div className="child-div">
           <figure>
-            <img src="./images/todo.svg" alt="todologo" />
-            <figcaption>Add Your List Here ✌</figcaption>
+            <figcaption>Add Your List Here ✅</figcaption>
           </figure>
           <div className="addItems">
             <input
